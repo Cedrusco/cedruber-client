@@ -1,0 +1,35 @@
+<section>
+	<h1>Cedruber Customers</h1>
+  <h4>Current Customers</h4>
+  <table class="pure-table">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </tr>
+    <tr ng-repeat="customer in customers">
+      <td>{{customer.name}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+    </tr>
+  </table>
+  <button class="pure-button" ng-click="getCustomers()">Get Customers</button>
+
+  <h4 style="margin-top: 20px;">Create New Customer</h4>
+  <form class="pure-form" ng-submit="createCustomer()">
+    <input ng-model="customer.name" placeholder="name" />
+    <input ng-model="customer.phone" placeholder="phone" />
+    <input ng-model="customer.email" placeholder="email" />
+    <button class="pure-button" type="submit">Create Customer</button>
+  </form>
+
+  <br/>
+  <code style="color: blue">
+    Data: {{message.data}}
+  </code>
+  <br/>
+  <br/>
+  <code style="float: left">
+    URL: {{message.url}}
+  </code>
+</section>

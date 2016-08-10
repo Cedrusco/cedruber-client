@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+* {
+	box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Add your fractal Sass files below!
+@import 'navbar/navbar';
+@import 'home/home';

@@ -1,0 +1,32 @@
+<section>
+	<h1>Cedruber Drivers</h1>
+  <h4>Current Drivers</h4>
+  <table class="pure-table">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+    </tr>
+    <tr ng-repeat="driver in drivers">
+      <td>{{driver.name}}</td>
+      <td>{{driver.phone}}</td>
+    </tr>
+  </table>
+  <button class="pure-button" ng-click="getDrivers()">Get Drivers</button>
+
+  <h4 style="margin-top: 20px;">Create New Driver</h4>
+  <form class="pure-form" ng-submit="createDriver()">
+    <input ng-model="driver.name" placeholder="name" />
+    <input ng-model="driver.phone" placeholder="phone" />
+    <button class="pure-button" type="submit">Create Driver</button>
+  </form>
+
+  <br/>
+  <code style="color: blue">
+    Data: {{message.data}}
+  </code>
+  <br/>
+  <br/>
+  <code style="float: left">
+    URL: {{message.url}}
+  </code>
+</section>
